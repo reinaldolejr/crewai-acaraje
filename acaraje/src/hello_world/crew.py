@@ -1,3 +1,4 @@
+from acaraje.src.hello_world.tools.custom_tool import MyCustomTool
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
@@ -19,8 +20,11 @@ class HelloWorld():
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
 	def researcher(self) -> Agent:
+		custom_tool_selenium_research = MyCustomTool()
+
 		return Agent(
 			config=self.agents_config['researcher'],
+			tools=[custom_tool_selenium_research],
 			verbose=True
 		)
 
