@@ -1,10 +1,10 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
+    Search Google Maps to find acaraje stores in {location}.
+    Make sure you find stores that are open now and relevant information given
     the current year is {current_year}.
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A list with 10 bullet points of the most closest acarajé stores in {location}
   agent: researcher
 
 reporting_task:

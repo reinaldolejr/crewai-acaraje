@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'Acarajé (Brazilian food)',
+        'location': 'Salvador, Bahia',
         'current_year': str(datetime.now().year)
     }
     
@@ -33,7 +33,8 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        'topic': 'Acarajé (Brazilian food)',
+        'location': 'Salvador, Bahia',
+        'current_year': str(datetime.now().year)
     }
     try:
         HelloWorld().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -56,7 +57,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        'topic': 'Acarajé (Brazilian food)',
+        'location': 'Salvador, Bahia',
     }
     try:
         HelloWorld().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
